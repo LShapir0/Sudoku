@@ -413,5 +413,12 @@ int swap_cols(int col1, int col2, int board[9][9]){
     }
 
     return 0;
+}
 
+void transform_permute_bands(int board[9][9]){
+    printf("Function transform_permute_bands not implemented");
+}
+
+void transform_permute_stacks(int board[9][9]){
+    printf("Function transform_permute_rows not implemented");
 }

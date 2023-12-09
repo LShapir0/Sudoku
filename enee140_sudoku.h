@@ -21,6 +21,12 @@ void transform_flip_minor_diagonal(int board[9][9]);
 
 int print_sudoku_board(int board[9][9]);
 
+void transform_permute_bands(int board[9][9]);
+
+void transform_permute_stacks(int board[9][9]);
+
+
+
 
 int read_sudoku_board(const char file_name[], int board[9][9]);
 
