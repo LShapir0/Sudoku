@@ -10,18 +10,24 @@
 #include <stdlib.h>
 #include <time.h>
 
-int
-main(int argc, char *argv[]){
-        int board[9][9];
-        int bit;
-        for(bit = 0; )
-
-    return ((argv[1] & (1<<bit_num))>>bit_num);
+int main(int argc, char *argv[]) {
+    int board[9][9];
+    int bit;
 
 
 
 
-        return 0;
+     if(atoi(argv[2]) & 1<<1){
+
+     }
+    if(atoi(argv[2]) & 1<<1){
+
+    }
+
+
+
+
+    return 0;
 }
 
 

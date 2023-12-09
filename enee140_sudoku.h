@@ -27,15 +27,11 @@ int read_sudoku_board(const char file_name[], int board[9][9]);
 
 
 
-
-
-
-
 int print_board(int board[9][9]); // Print the board. For testing purposes only.
 
 int swap_rows(int row1, int row2, int board[9][9]); // Swap rows.
 
-int swap_cols(int col1, int col2, int board[9][9]) // Swap columns.
+int swap_cols(int col1, int col2, int board[9][9]); // Swap columns.
 
 
 #endif /* SUDOKU_H_ */
