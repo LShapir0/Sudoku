@@ -16,7 +16,6 @@ int main(int argc, char *argv[]) {
 
     srand(time(0)); // Seeding random number generation
 
-
     if( args & 1<<0){
         read_sudoku_board(argv[1], board);
         is_valid_board(board);
@@ -25,7 +24,7 @@ int main(int argc, char *argv[]) {
             return 0;
         }
     } else {
-        int blanks = rand() % (61 - 31 + 1)) + 31;
+        int blanks = rand() % (61 - 31 + 1) + 31;
         new_sudoku_board(board, blanks);
     }
     if(args & 1<<1){
@@ -47,7 +46,7 @@ int main(int argc, char *argv[]) {
         transform_flip_minor_diagonal(board);
     }
     if(args & 1<<7){
-        print_board(board);
+        print_sudoku_board(board);
     }
 
     return 0;

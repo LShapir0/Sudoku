@@ -242,8 +242,24 @@ void transform_flip_minor_diagonal(int board[9][9]) {
 /**
  * Print sudoku board in user friendly fashion.
  */
-int print_sudoku_board(int board[9][9]) {
-    printf("Function print_sudoku_board not implemented.");
+int print_psudoku_board(int board[9][9]) {
+    int i,j;
+    for (i = 0; i < 9; i++) { // Rows
+        if(i % 3 == 0 ) {
+            printf("+‐‐‐‐‐‐‐+‐‐‐‐‐‐‐+‐‐‐‐‐‐‐+\n");
+        }
+        for (j = 0; j < 9; j++) { // Columns
+            if( j == 0){
+                printf("|");
+            } else if (j % 3 == 0){
+                printf(" |");
+            }
+            printf("%2d", board[i][j]);
+        }
+        printf(" |\n");
+    }
+    printf("+‐‐‐‐‐‐‐+‐‐‐‐‐‐‐+‐‐‐‐‐‐‐+");
+    printf("\n");
     return 0;
 }
 
@@ -416,9 +432,9 @@ int swap_cols(int col1, int col2, int board[9][9]){
 }
 
 void transform_permute_bands(int board[9][9]){
-    printf("Function transform_permute_bands not implemented");
+    printf("Function transform_permute_bands not implemented.\n");
 }
 
 void transform_permute_stacks(int board[9][9]){
-    printf("Function transform_permute_rows not implemented");
+    printf("Function transform_permute_rows not implemented.\n");
 }
