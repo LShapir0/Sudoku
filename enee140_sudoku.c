@@ -242,7 +242,7 @@ void transform_flip_minor_diagonal(int board[9][9]) {
 /**
  * Print sudoku board in user friendly fashion.
  */
-int print_psudoku_board(int board[9][9]) {
+int print_sudoku_board(int board[9][9]) {
     int i,j;
     for (i = 0; i < 9; i++) { // Rows
         if(i % 3 == 0 ) {
