@@ -244,6 +244,7 @@ void transform_flip_minor_diagonal(int board[9][9]) {
  */
 int print_sudoku_board(int board[9][9]) {
     printf("Function print_sudoku_board not implemented.");
+    return 0;
 }
 
 /**
@@ -352,4 +353,65 @@ int write_sudoku_board(const char file_name[], int board[9][9]) {
 
     fclose(file);
     return 0; // Success
+}
+
+int swap_rows(int row1, int row2, int board[9][9]){
+    /*
+     * Function to swap rows of a 2d array. Accepts two rows to be swapped,
+     * and at the 2d array where the swapping occurs.
+     *
+     * Returns 0 when successful row swapping occurs.
+     */
+
+
+    int i;
+    int j;
+
+    int boardtemp[9][9];
+
+
+    for (i = 0; i < 9; i++){
+        for (j = 0; j < 9; j++){
+
+            boardtemp[row1][j] = board[row1][j];
+
+            board[row1][j] = board[row2][j];
+
+            board[row2][j] = boardtemp[row1][j];
+
+        }
+    }
+
+    return 0;
+
+}
+
+int swap_cols(int col1, int col2, int board[9][9]){
+    /*
+     * Function to swap rows of a 2d array. Accepts two rows to be swapped,
+     * and at the 2d array where the swapping occurs.
+     *
+     * Returns 0 when successful row swapping occurs.
+     */
+
+
+    int i;
+    int j;
+
+    int boardtemp[9][9];
+
+
+    for (i = 0; i < 9; i++){
+        for (j = 0; j < 9; j++){
+
+            boardtemp[i][col1] = board[i][col1];
+
+            board[i][col1] = board[i][col2];
+
+            board[i][col2] = boardtemp[i][col1];
+        }
+    }
+
+    return 0;
+
 }
